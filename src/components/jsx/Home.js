@@ -6,9 +6,11 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <>
-      <h2>BCT-077 AB Portal</h2>
-      <div>
+    <div className="h-100vh w-100% flex flex-col justify-center align-middle">
+      <h2 className="text-center text-gray-700 text-2xl font-semibold space-x-2">
+        BCT-077 AB Portal
+      </h2>
+      <div className="flex flex-wrap justify-between mt-40 w-9/12">
         <Link to="/video">
           <img src={videoImage} alt="" />
         </Link>
@@ -22,34 +24,9 @@ const Home = () => {
           <img src={adminImage} alt="" />{' '}
         </Link>
       </div>
-    </>
+    </div>
   );
 };
-
-// const Container = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   height: 100vh;
-//   width: 100%;
-// `;
-// const Header = styled.div`
-//   font-family: 'Sancreek', cursive;
-//   font-size: 45px;
-//   line-height: 43px;
-//   text-align: center;
-//   letter-spacing: 0.06em;
-//   color: #f3f3f3;
-// `;
-
-// const Navigator = styled.div`
-//   width: 75%;
-//   display: flex;
-//   justify-content: space-between;
-//   flex-wrap: wrap;
-//   margin-top: 40px;
-// `;
 
 // const NavIcon = styled.img`
 //   width: 180px;
