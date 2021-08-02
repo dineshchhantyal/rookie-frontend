@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Home from './components/jsx/Home';
-import Video from './components/jsx/Video';
-import Notes from './components/jsx/Notes';
-import Student from './components/jsx/Student';
-import Admin from './components/jsx/Admin';
+import Home from './pages/Home';
+import Video from './pages/Video';
+import Notes from './pages/Notes';
+import Teams from './pages/Teams';
+import Admin from './pages/Admin';
 
 function App() {
   return (
-    <div className="app">
+    <div className="app w-full h-screen text-gray-50 bg-gray-800">
       <Router>
         <Switch>
           <Route path="/video">
@@ -16,8 +16,8 @@ function App() {
           <Route path="/notes">
             <Notes />
           </Route>
-          <Route path="/student">
-            <Student />
+          <Route path="/team">
+            <Teams />
           </Route>
           <Route path="/admin">
             <Admin />
