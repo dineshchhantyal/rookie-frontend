@@ -7,7 +7,7 @@ import Admin from './pages/Admin';
 
 function App() {
   return (
-    <div className="app w-full h-screen text-gray-50 bg-gray-800">
+    <div className="app w-full min-h-full text-gray-50 bg-gray-800">
       <Router>
         <Switch>
           <Route path="/video">

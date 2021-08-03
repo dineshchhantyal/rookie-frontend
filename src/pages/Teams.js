@@ -1,6 +1,7 @@
 import React from 'react';
 import Team from '../components/Team';
 import AddIcon from '@material-ui/icons/Add';
+import Backdrop from '../components/Backdrop';
 
 const Teams = () => {
     return (
@@ -9,15 +10,15 @@ const Teams = () => {
                 List of Teams
             </h1>
             <div className="actions self-end pr-6">
-                <button className="bg-green-500 text-grey-200">
+                <Backdrop className="bg-green-500 text-grey-200">
                     <AddIcon />
-                </button>
+                </Backdrop>
             </div>
-            <div className="h-3/4 w-4/5">
-                <Team className="w-3/5" name={"dinesh"} projectName={"MahaKal"} />
-                <Team name={"dinesh"} projectName={"MahaKal"} />
-                <Team name={"dinesh"} projectName={"MahaKal"} />
-                <Team name={"dinesh"} projectName={"MahaKal"} />
+            <div className="w-4/5">
+                <Team className="w-3/5 m-12" name={"dinesh"} projectName={"MahaKal"} />
+                <Team className="w-3/5 m-4" name={"dinesh"} projectName={"MahaKal"} />
+                <Team className="w-3/5 m-4" name={"dinesh"} projectName={"MahaKal"} />
+                <Team className="w-3/5 m-4" name={"dinesh"} projectName={"MahaKal"} />
             </div>
 
         </div>
