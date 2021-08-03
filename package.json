@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^13.2.1",
     "autoprefixer": "^9",
     "cross-env": "7.x",
+    "firebase-tools": "^9.16.0",
     "postcss": "^7",
     "prettier": "^2.x",
     "prettier-plugin-tailwind": "^2.x",

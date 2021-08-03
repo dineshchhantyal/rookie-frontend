@@ -10,4 +10,4 @@ const Team = ({ name, members, projectName, description }) => {
     )
 }
 
-export default Team
+export default Team;
