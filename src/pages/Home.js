@@ -4,6 +4,7 @@ import adminImage from '../Images/admin.png';
 import stdImage from '../Images/std.png';
 import { Link } from 'react-router-dom';
 import '../styles/Home.css';
+import { Button } from '@material-ui/core';
 
 const Home = () => {
   return (
@@ -23,6 +24,11 @@ const Home = () => {
         </Link>
         <Link className={'navIcon'} to="/admin">
           <img src={adminImage} alt="" />{' '}
+        </Link>
+        <Link className="navIcon" to="/token">
+          <Button variant="outlined" color="primary">
+            Submit Your Token
+          </Button>
         </Link>
       </div>
     </div>
