@@ -4,7 +4,7 @@ import adminImage from '../Images/admin.png';
 import stdImage from '../Images/std.png';
 import { Link } from 'react-router-dom';
 import '../styles/Home.css';
-import { Button } from '@material-ui/core';
+import BorderColorIcon from '@material-ui/icons/BorderColor';
 
 const Home = () => {
   return (
@@ -22,15 +22,16 @@ const Home = () => {
         <Link className={'navIcon'} to="/team">
           <img src={stdImage} alt="" />{' '}
         </Link>
+
+
         <Link className={'navIcon'} to="/admin">
           <img src={adminImage} alt="" />{' '}
         </Link>
-        <Link className="navIcon" to="/token">
-          <Button variant="outlined" color="primary">
-            Submit Your Token
-          </Button>
-        </Link>
       </div>
+      <Link className={'flex items-center justify-center w-1/4 bg-blue-200 p-2 hover:bg-blue-300 '} to="/exam">
+        <BorderColorIcon fontSize="large" color="primary" />
+        <p className="font-bold text-2xl text-red-500">Exam Special 🎉</p>
+      </Link>
     </div>
   );
 };

@@ -4,7 +4,7 @@ import Video from './pages/Video';
 import Notes from './pages/Notes';
 import Teams from './pages/Teams';
 import Admin from './pages/Admin';
-import Tokens from './pages/Tokens';
+import Exam from './pages/Exam';
 
 function App() {
   return (
@@ -23,8 +23,8 @@ function App() {
           <Route path="/admin">
             <Admin />
           </Route>
-          <Route path="/token">
-            <Tokens />
+          <Route path="/exam">
+            <Exam />
           </Route>
           <Route path="/">
             <Home />
