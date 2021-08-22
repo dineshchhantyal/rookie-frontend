@@ -27,8 +27,8 @@ const ExamView = () => {
                             <form className={`flex flex-wrap w-full flex-1 ${question.div}`}>
                                 {JSON.parse(question.questionInfo).Choices?.map(choice => (
                                     <div className="py-2 px-9" >
-                                        <label htmlFor={choice.FormsProDisplayRTText}>
-                                            <input type="radio" key={choice.FormsProDisplayRTText + Math.random()} className="pr-4" value={choice.FormsProDisplayRTText} />
+                                        <label htmlFor={choice.FormsProDisplayRTText} name={choice.FormsProDisplayRTText}>
+                                            <input type="radio" key={choice.FormsProDisplayRTText + Math.random()} className="pr-4" value={choice.FormsProDisplayRTText} name={choice.FormsProDisplayRTText} />
                                             <span dangerouslySetInnerHTML={{ __html: choice.FormsProDisplayRTText }} />
                                         </label>
                                     </div>

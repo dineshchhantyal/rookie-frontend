@@ -23,7 +23,6 @@ const Home = () => {
           <img src={stdImage} alt="" />{' '}
         </Link>
 
-
         <Link className={'navIcon'} to="/admin">
           <img src={adminImage} alt="" />{' '}
         </Link>
