@@ -5,6 +5,7 @@ import Notes from './pages/Notes';
 import Teams from './pages/Teams';
 import Admin from './pages/Admin';
 import Exam from './pages/Exam';
+import ExamView from './pages/ExamView';
 
 function App() {
   return (
@@ -23,8 +24,11 @@ function App() {
           <Route path="/admin">
             <Admin />
           </Route>
-          <Route path="/exam">
+          <Route path="/exam" exact>
             <Exam />
+          </Route>
+          <Route path="/exam/:id">
+            <ExamView />
           </Route>
           <Route path="/">
             <Home />

@@ -1,6 +1,7 @@
 import axios from 'axios';
-const baseUrl = 'https://rookie-bot.herokuapp.com/';
-// const baseUrl = 'http://localhost:5000';
+import build from './config';
+
+const baseUrl = build == "prod" ? 'https://rookie-bot.herokuapp.com/' : "http://localhost:5000/";
 
 const myAxios = axios.create({
     baseURL: baseUrl
