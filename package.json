@@ -12,7 +12,7 @@
     "autoprefixer": "^9",
     "axios": "^0.21.1",
     "cross-env": "7.x",
-    "firebase-tools": "^9.16.0",
+    "firebase-tools": "^9.16.5",
     "postcss": "^7",
     "prettier": "^2.x",
     "prettier-plugin-tailwind": "^2.x",
