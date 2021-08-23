@@ -16,6 +16,11 @@ const ExamView = () => {
     const [description, setDescription] = useState();
     const [questions, setQuestions] = useState();
     const [value, setValue] = useState(null);
+    const [show, setShow] = useState(false);
+    const [status, setStatus] = useState({
+        "option 1": "20%",
+        "option 2": "40%",
+    });
     useEffect(() => {
         return (
             myAxios(`/mcq/${id}`).then(res => {
@@ -34,6 +39,7 @@ const ExamView = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
+        setShow(show => !show);
     }
     return (
         <div className="h-full flex justify-center items-center p-4  flex-col">
@@ -41,24 +47,25 @@ const ExamView = () => {
             <div className="question flex flex-col text-lg m-4">
                 {questions?.map(question => (
 
-                    <div className="options text-indigo-500 text-lg w-full m-5">
-                        <form className={`flex flex-wrap flex-1 ${question.div}`} onSubmit={handleSubmit}>
+                    <form className={`flex flex-wrap flex-1 ${question.div}`} key={question.id} onSubmit={handleSubmit}>
 
 
-                            <FormControl component="fieldset" key={question.id} className="p-5 w-full">
-                                <FormLabel component="legend">
-                                    <p className="text-xl text-blue-600 font-semibold py-4" key={question.id + question.formsProoRTQuestionTitle} dangerouslySetInnerHTML={{ __html: question.formsProRTQuestionTitle }} />
-                                </FormLabel>
-                                <RadioGroup aria-label="options" name="options" value={value} onChange={handleChange}>
-                                    {JSON.parse(question.questionInfo).Choices?.map(choice => (
-                                        <FormControlLabel key={choice.FormsProDisplayRTText.split("&")[0]} value={choice.FormsProDisplayRTText.split("&")[0]} control={<Radio />} label={choice.FormsProDisplayRTText.split("&")[0]} />))}
-                                </RadioGroup>
-                                <Button type="submit" variant="outlined" color="secondary">
-                                    Check Answer
-                                </Button>
-                            </FormControl>
-                        </form>
-                    </div>
+                        <FormControl component="fieldset" className="p-5 w-full text-blue-500">
+                            <FormLabel component="legend">
+                                <p className="text-xl text-blue-600 font-semibold py-4" key={question.id + question.formsProoRTQuestionTitle} dangerouslySetInnerHTML={{ __html: question.formsProRTQuestionTitle }} />
+                            </FormLabel>
+                            <RadioGroup aria-label="options" name="options" value={value} onChange={handleChange}>
+                                {JSON.parse(question.questionInfo).Choices?.map(choice => (
+                                    <FormControlLabel key={choice.FormsProDisplayRTText.split("&")[0]} value={choice.FormsProDisplayRTText.split("&")[0]} control={<Radio />} label={choice.FormsProDisplayRTText.split("&")[0]} />))}
+                            </RadioGroup>
+                            <Button type="submit" variant="outlined" color="secondary">
+                                Submit Answer
+                            </Button>
+                            <p className="h-4 w-3/5">
+                                {show ? "Ans will come here" : ""}
+                            </p>
+                        </FormControl>
+                    </form>
 
                 ))
                 }
