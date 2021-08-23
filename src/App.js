@@ -1,13 +1,15 @@
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Home from './components/jsx/Home';
-import Video from './components/jsx/Video';
-import Notes from './components/jsx/Notes';
-import Student from './components/jsx/Student';
-import Admin from './components/jsx/Admin';
+import Home from './pages/Home';
+import Video from './pages/Video';
+import Notes from './pages/Notes';
+import Teams from './pages/Teams';
+import Admin from './pages/Admin';
+import Exam from './pages/Exam';
+import ExamView from './pages/ExamView';
 
 function App() {
   return (
-    <div className="app">
+    <div className="app w-full min-h-full text-gray-50 bg-gray-300">
       <Router>
         <Switch>
           <Route path="/video">
@@ -16,11 +18,17 @@ function App() {
           <Route path="/notes">
             <Notes />
           </Route>
-          <Route path="/student">
-            <Student />
+          <Route path="/team">
+            <Teams />
           </Route>
           <Route path="/admin">
             <Admin />
+          </Route>
+          <Route path="/exam" exact>
+            <Exam />
+          </Route>
+          <Route path="/exam/:id">
+            <ExamView />
           </Route>
           <Route path="/">
             <Home />
