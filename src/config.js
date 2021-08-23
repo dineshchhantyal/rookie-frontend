@@ -1,3 +1,3 @@
-const build = "dev"; // dev or prod
+const build = "prod"; // dev or prod
 
 module.exports = build;
